@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav id="navbar">
+        <header class="engrave">CSS Documentation</header>
+
+        <ul>
+          <li>
+            <a href="#Starting_HTML" class="nav-link sec1">Starting HTML</a>
+          </li>
+          <li><a href="#Adding_CSS" class="nav-link sec1">Adding CSS</a></li>
+          <li>
+            <a href="#Styling_HTML_elements" class="nav-link sec1"
+              >Styling HTML elements</a
+            >
+          </li>
+          <li>
+            <a href="#Changing_behavior" class="nav-link sec1"
+              >Changing behavior</a
+            >
+          </li>
+          <li>
+            <a href="#Adding_a_class" class="nav-link sec2">Adding a class</a>
+          </li>
+          <li>
+            <a href="#Styling_things_on_location" class="nav-link sec2"
+              >Styling things on location</a
+            >
+          </li>
+          <li>
+            <a href="#Styling_things_based_on_state" class="nav-link sec2"
+              >Styling things based on state</a
+            >
+          </li>
+          <li><a href="#Wrapping_up" class="nav-link sec2">Wrapping up</a></li>
+        </ul>
+        <a class="copyright" href="https://github.com/codrinbulgariu"
+          >Copyright @Codrin</a
+        >
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Starting_HTML">
+          <header>Starting HTML</header>
+          <article>
+            <p>
+              Our starting point is an HTML document. You can copy the code from
+              below if you want to work on your own computer. Save the code
+              below as <span class="light">index.html</span> in a folder on your
+              machine.
+            </p>
+            <code
+              >var a, b, c; <br />
+              a = 5; <br />
+              b = 6; <br />
+              c = a + b; <br />
+              document.getElementById("demo1")<br />
+              .innerHTML = c;</code
+            >
+            <ul>
+              <li>
+                If you are reading this on a device or an environment where you
+                can't easily create files, then don't worry
+              </li>
+              <li>
+                live code editors are provided below to allow you to write
+                example code right here in the page.
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Adding_CSS">
+          <header>Adding CSS</header>
+          <article>
+            <p>
+              The very first thing we need to do is to tell the HTML document
+              that we have some CSS rules we want it to use. There are three
+              different ways to apply CSS to an HTML document that you'll
+              commonly come across, however, for now, we will look at the most
+              usual and useful way of doing so — linking CSS from the head of
+              your document.
+            </p>
+            <ul>
+              <li>
+                Create a file in the same folder as your HTML document and save
+                it as styles.css. The .css extension shows that this is a CSS
+                file.
+              </li>
+              <li>
+                To link styles.css to index.html add the following line
+                somewhere inside the &lthead&gt; of the HTML document
+              </li>
+            </ul>
+            <code
+              >'hello'.charAt(0); // "h" <br />
+              'hello, world'.replace('world', 'mars'); // "hello, mars" <br />
+              'hello'.toUpperCase(); // "HELLO"</code
+            >
+            <p>
+              This &ltlink /&gt element tells the browser that we have a
+              stylesheet, using the rel attribute, and the location of that
+              stylesheet as the value of the href attribute. You can test that
+              the CSS works by adding a rule to styles.css. Using your code
+              editor add the following to your CSS file
+            </p>
+            <code
+              >const Pi = 3.14; // variable Pi is set <br />
+              Pi = 1; // will throw an error because you cannot change a
+              constant variable.</code
+            >
+            <p>
+              Save your HTML and CSS files and reload the page in a web browser.
+              The level one heading at the top of the document should now be
+              red. If that happens, congratulations — you have successfully
+              applied some CSS to an HTML document. If that doesn't happen,
+              carefully check that you've typed everything correctly.
+            </p>
+            <p>
+              You can continue to work in styles.css locally, or you can use our
+              interactive editor below to continue with this tutorial. The
+              interactive editor acts as if the CSS in the first panel is linked
+              to the HTML document, just as we have with our document above.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Styling_HTML_elements">
+          <header>Styling HTML elements</header>
+          <article>
+            <p>
+              By making our heading red we have already demonstrated that we can
+              target and style an HTML element. We do this by targeting an
+              element selector — this is a selector that directly matches an
+              HTML element name. To target all paragraphs in the document you
+              would use the selector p. To turn all paragraphs green you would
+              use:
+            </p>
+            <code>
+              var name = 'kittens'; <br />
+              if (name == 'puppies') { <br />
+              name += ' woof'; <br />
+              } else if (name == 'kittens') { <br />
+              name += ' meow'; <br />
+              } else { <br />
+              name += '!'; <br />
+              } name == 'kittens meow'; <br />
+            </code>
+            <ul>
+              <li>
+                You can target multiple selectors at once, by separating the
+                selectors with a comma. If I want all paragraphs and all list
+                items to be green my rule looks like this
+              </li>
+              <li>
+                Try this out in the interactive editor below (edit the code
+                boxes), or in your local CSS document
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Changing_behavior">
+          <header>Changing behavior</header>
+          <article>
+            <p>
+              When we look at a well-marked up HTML document, even something as
+              simple as our example, we can see how the browser is making the
+              HTML readable by adding some default styling. Headings are large
+              and bold and our list has bullets. This happens because browsers
+              have internal stylesheets containing default styles, which they
+              apply to all pages by default; without them all of the text would
+              run together in a clump and we would have to style everything from
+              scratch. All modern browsers display HTML content by default in
+              pretty much the same way.
+            </p>
+            <p>
+              However, you will often want something other than the choice the
+              browser has made. This can be done by choosing the HTML element
+              that you want to change, and using a CSS rule to change the way it
+              looks. A good example is our &ltul&gt, an unordered list. It has
+              list bullets, and if I decide I don't want those bullets I can
+              remove them like so:
+            </p>
+            <code
+              >while (true) { <br />
+              // an infinite loop! <br />
+              } <br />
+              <br />
+              var input; <br />
+              do { <br />
+              input = get_input(); <br />
+              } while (inputIsNotValid(input));</code
+            >
+            <p>
+              The list-style-type property is a good property to look at on MDN
+              to see which values are supported. Take a look at the page for
+              list-style-type and you will find an interactive example at the
+              top of the page to try some different values in, then all
+              allowable values are detailed further down the page.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Adding_a_class">
+          <header>Adding a class</header>
+          <article>
+            <p>
+              So far we have styled elements based on their HTML element names.
+              This works as long as you want all of the elements of that type in
+              your document to look the same. Most of the time that isn't the
+              case and so you will need to find a way to select a subset of the
+              elements without changing the others. The most common way to do
+              this is to add a class to your HTML element and target that class.
+            </p>
+            <p>
+              In your HTML document, add a class attribute to the second list
+              item. Your list will now look like this:
+            </p>
+            <code
+              >for (var i = 0; i < 5; i++) { <br />
+              // Will execute 5 times }</code
+            >
+            <p>
+              In your CSS you can target the class of special by creating a
+              selector that starts with a full stop character. Add the following
+              to your CSS file:
+            </p>
+            <code
+              >for (let value of array) { <br />
+              // do something with value }</code
+            >
+            <p>
+              You can apply the class of special to any element on your page
+              that you want to have the same look as this list item. For
+              example, you might want the &ltspan&gt in the paragraph to also be
+              orange and bold. Try adding a class of special to it, then reload
+              your page and see what happens.
+            </p>
+            <p>
+              Sometimes you will see rules with a selector that lists the HTML
+              element selector along with the class:
+            </p>
+            <code
+              >for (let property in object) { <br />
+              // do something with object property }</code
+            >
+            <p>
+              As you can imagine, some classes might be applied to many elements
+              and you don't want to have to keep editing your CSS every time
+              something new needs to take on that style.
+            </p>
+            <ul>
+              <li>
+                Therefore it is sometimes best to bypass the element and refer
+                to the class
+              </li>
+              <li>
+                unless you know that you want to create some special rules for
+                one element alone
+              </li>
+              <li>
+                perhaps want to make sure they are not applied to other things
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Styling_things_on_location">
+          <header>Styling things on location</header>
+          <article>
+            <p>
+              There are times when you will want something to look different
+              based on where it is in the document. There are a number of
+              selectors that can help you here, but for now we will look at just
+              a couple. In our document are two &ltem&gt elements — one inside a
+              paragraph and the other inside a list item. To select only an
+              &ltem&gt that is nested inside an &ltli&gt element I can use a
+              selector called the descendant combinator, which takes the form of
+              a space between two other selectors.
+            </p>
+            <code>
+              switch (action) { <br />
+              case 'draw': <br />
+              drawIt(); <br />
+              break; <br />
+              case 'eat': <br />
+              eatIt(); <br />
+              break; <br />
+              default: <br />
+              doNothing(); <br />
+              }
+            </code>
+            <p>
+              Something else you might like to try is styling a paragraph when
+              it comes directly after a heading at the same hierarchy level in
+              the HTML. To do so place a + (an adjacent sibling combinator)
+              between the selectors.
+            </p>
+            <p>
+              The live example below includes the two rules above. Try adding a
+              rule to make a span red, if it is inside a paragraph. You will
+              know if you have it right as the span in the first paragraph will
+              be red, but the one in the first list item will not change color.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Styling_things_based_on_state">
+          <header>Styling things based on state</header>
+          <article>
+            <p>
+              The final type of styling we shall take a look at in this tutorial
+              is the ability to style things based on their state. A
+              straightforward example of this is when styling links. When we
+              style a link we need to target the &lta&gt (anchor) element. This
+              has different states depending on whether it is unvisited,
+              visited, being hovered over, focused via the keyboard, or in the
+              process of being clicked (activated). You can use CSS to target
+              these different states — the CSS below styles unvisited links pink
+              and visited links green. a:link {
+            </p>
+            <code
+              >switch (a) { <br />
+              case 1: // fallthrough <br />
+              case 2: <br />
+              eatIt(); <br />
+              break; <br />
+              default: <br />
+              doNothing(); }</code
+            >
+            <p>
+              The default clause is optional. You can have expressions in both
+              the switch part and the cases if you like; comparisons take place
+              between the two using the === operator:
+            </p>
+            <code
+              >switch (1 + 3) { <br />
+              case 2 + 2: <br />
+              yay(); <br />
+              break; <br />
+              default: <br />
+              neverhappens(); }</code
+            >
+          </article>
+        </section>
+        <section class="main-section" id="Wrapping_up">
+          <header>Wrapping up</header>
+          <article>
+            <p>
+              Don't worry if this seems complicated at the moment — you'll soon
+              start to get the hang of it as you write more CSS.
+            </p>
+            <ul>
+              <li>
+                In this tutorial, we have taken a look at a number of ways in
+                which you can style a document using CSS
+              </li>
+              <li>
+                We will be developing this knowledge as we move through the rest
+                of the lessons. However you now already know enough to style
+                text, apply CSS based on different ways of targeting elements in
+                the document, and look up properties and values in the MDN
+                documentation
+              </li>
+              <li>
+                In the next lesson we will be taking a look at how CSS is
+                structured
+              </li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

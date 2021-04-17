@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  background: #ebecf0;
+}
+
+$desktop: 830px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+.wrapper {
+  margin: 20px auto;
+  padding: 0 1.7em;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: #ebecf0;
+  box-shadow: 30px 30px 59px #c8c9cc, -30px -30px 59px #f8f8f8;
+
+  @include desktop {
+    position: fixed;
+    min-width: 290px;
+    top: 3em;
+    left: 40px;
+    width: 300px;
+    height: 90%;
+  }
+
+  header {
+    text-align: center;
+    padding: 7px 15px;
+    margin-top: 20px;
+    font-family: Nunito, sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 50px;
+    background: #ebecf0;
+    box-shadow: 7px 7px 14px #c8c9cc, -7px -7px 14px #f8f8f8;
+    text-shadow: 1.5px 1.5px 1px #fff;
+    color: #e63946;
+    max-width: 300px;
+
+    .engrave {
+      text-shadow: 1px 1px 1px #fff;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 20px 1em;
+    padding: 0;
+    text-align: center;
+    margin-top: 15px;
+
+    li {
+      padding: 15px;
+      margin: 20px;
+      border-radius: 50px;
+      background: #ebecf0;
+      box-shadow: 7px 7px 14px #c8c9cc, -7px -7px 14px #ffffff;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: -2px -2px 5px #fff, 2px 2px 5px #c8c9cc;
+      }
+      &:focus {
+        box-shadow: -3px -3px 7px #fff, 2px 2px 5px #c8c9cc;
+      }
+
+      &:active {
+        box-shadow: inset 2px 2px 3px #c8c9cc, inset -2px -2px 3px #fff;
+      }
+      a {
+        text-decoration: none;
+        color: #7c7f91;
+        font-weight: 600;
+        background-color: #ebecf0;
+        text-shadow: 1px 1px 0 #fff;
+        width: 30%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    margin-bottom: 20px;
+
+    color: #e63946;
+    font-weight: 600;
+    background-color: #ebecf0;
+    text-shadow: 1px 1px 0 #fff;
+    width: 30%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover,
+    :focus {
+      transform: translateY(20px);
+    }
+  }
+}
+
+#main-doc {
+  margin-top: 80px;
+
+  @include desktop {
+    position: absolute;
+    margin-left: 330px;
+    padding: 40px;
+    margin-bottom: 110px;
+  }
+
+  .main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em 15px;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    background: #ebecf0;
+    box-shadow: 30px 30px 59px #c8c9cc, -30px -30px 59px #f8f8f8;
+
+    header {
+      text-align: center;
+      font-family: Nunito, sans-serif;
+      font-size: 1.3em;
+      padding: 10px 30px;
+      margin-top: 10px;
+      color: #e63946;
+      font-weight: 800;
+      background-color: #ebecf0;
+      text-shadow: 1px 1px 0 #fff;
+      letter-spacing: 2px;
+      border-radius: 50px;
+      background: #ebecf0;
+      box-shadow: 7px 7px 14px #c8c9cc, -7px -7px 14px #f8f8f8;
+      text-shadow: 1.5px 1.5px 1px #fff;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 18px;
+      margin-bottom: 5px;
+      padding: 1em 1.3em;
+      border-radius: 50px;
+      background: #ebecf0;
+      box-shadow: inset 19px 19px 39px #c8c9cc, inset -19px -19px 39px #ffffff;
+
+      p {
+        font-size: 0.9;
+        line-height: 1.6;
+        font-weight: 500;
+      }
+
+      code {
+        padding: 0.5em 1em;
+        font-weight: 600;
+        color: #1d3557;
+        border: 1px solid #3c5272;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include desktop {
+          font-size: 1.3em;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}
